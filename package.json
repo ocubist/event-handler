@@ -1,7 +1,7 @@
 {
-  "name": "PACKAGE_NAME",
-  "version": "0.1.0",
-  "description": "DESCRIPTION",
+  "name": "@ocubist/event-handler",
+  "version": "0.2.0",
+  "description": "For personal usage",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -14,5 +14,16 @@
   },
   "keywords": [],
   "author": "ocubist",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "rimraf": "^5.0.7",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.26.3",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@ocubist/singleton-manager": "^0.6.0"
+  }
 }
