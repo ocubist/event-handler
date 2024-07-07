@@ -1,0 +1,114 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@ocubist/event-handler - v0.2.0</title><meta name="description" content="Documentation for @ocubist/event-handler"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@ocubist/event-handler - v0.2.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>@ocubist/event-handler - v0.2.0</h2></div><div class="tsd-panel tsd-typography"><a id="md:package-template" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Package-Template<a href="#md:package-template" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><a id="md:initialize-project" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Initialize Project<a href="#md:initialize-project" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>When creating a new package, run these commands</strong></p>
+<p>Note, that you have to manually set the uncommented command to delete the git metadata, depending on the environment. Default is Powershell, but UNIX is available.</p>
+<pre><code class="bash"><span class="hl-0"># Clone the template repository into the current directory</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">clone</span><span class="hl-2"> </span><span class="hl-3">https://github.com/ocubist/package-template.git</span><span class="hl-2"> </span><span class="hl-3">.</span><br/><br/><span class="hl-0"># Remove the git metadata</span><br/><span class="hl-1">Remove-Item</span><span class="hl-2"> </span><span class="hl-4">-Recurse</span><span class="hl-2"> </span><span class="hl-4">-Force</span><span class="hl-2"> </span><span class="hl-3">.git</span><span class="hl-2"> </span><span class="hl-0"># For Windows PowerShell</span><br/><span class="hl-0"># rm -rf .git # For Unix-like systems (macOS, Linux)</span><br/><br/><span class="hl-0"># Initialize Git and create branches</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">init</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">add</span><span class="hl-2"> </span><span class="hl-3">.</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">commit</span><span class="hl-2"> </span><span class="hl-4">-m</span><span class="hl-2"> </span><span class="hl-3">&quot;Setup Environment from Package-Template&quot;</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">checkout</span><span class="hl-2"> </span><span class="hl-4">-b</span><span class="hl-2"> </span><span class="hl-3">develop</span><br/><br/><span class="hl-0"># Install basic packages</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-4">--save-dev</span><span class="hl-2"> </span><span class="hl-3">typescript@latest</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-4">--save-dev</span><span class="hl-2"> </span><span class="hl-3">typedoc@latest</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-4">--save-dev</span><span class="hl-2"> </span><span class="hl-3">ts-node@latest</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-4">--save-dev</span><span class="hl-2"> </span><span class="hl-3">ts-jest</span><span class="hl-2"> </span><span class="hl-3">@types/jest@latest</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-4">--save-dev</span><span class="hl-2"> </span><span class="hl-3">rimraf@latest</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-4">--save-dev</span><span class="hl-2"> </span><span class="hl-3">typedoc</span><br/><br/><span class="hl-0"># Install @ocubist packages</span><br/><span class="hl-1">npm</span><span class="hl-2"> </span><span class="hl-3">install</span><span class="hl-2"> </span><span class="hl-3">@ocubist/error-alchemy@latest</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:update-template-files-from-package-template" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Update template-files from <code>package-template</code><a href="#md:update-template-files-from-package-template" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0"># Checkout the develop branch</span><br/><span class="hl-0"># git checkout develop</span><br/><br/><span class="hl-0"># Add the template repository as a remote</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">remote</span><span class="hl-2"> </span><span class="hl-3">add</span><span class="hl-2"> </span><span class="hl-3">package-template</span><span class="hl-2"> </span><span class="hl-3">https://github.com/ocubist/package-template.git</span><br/><br/><span class="hl-0"># Fetch updates from the template repository</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">fetch</span><span class="hl-2"> </span><span class="hl-3">package-template</span><br/><br/><span class="hl-0"># Merge the template repository into your develop branch</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">merge</span><span class="hl-2"> </span><span class="hl-3">package-template/main</span><span class="hl-2"> </span><span class="hl-4">--allow-unrelated-histories</span><br/><br/><span class="hl-0"># Remove the template repository remote</span><br/><span class="hl-1">git</span><span class="hl-2"> </span><span class="hl-3">remote</span><span class="hl-2"> </span><span class="hl-3">remove</span><span class="hl-2"> </span><span class="hl-3">package-template</span>
+</code><button type="button">Copy</button></pre>
+
+<blockquote>
+<p>Make sure to solve all Conflicts, otherwise the remote won't be removed again.</p>
+</blockquote>
+<blockquote>
+<p>Make sure the remote of <code>package-template</code> will be removed</p>
+</blockquote>
+<a id="md:publish-documentation-to-github-pages-andor-package-to-npm" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Publish Documentation to github-pages and/or Package to npm<a href="#md:publish-documentation-to-github-pages-andor-package-to-npm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>In <code>.env.github</code> set the <code>GHPW_AUTO_PUBLISH_PROJECT</code> to <code>true</code> to auto-publish the package to npm and publish the docs automatically.</p>
+<p>Even if <code>GHPW_AUTO_PUBLISH_PROJECT</code> is set to true, if <code>src/</code> had no recent changes, it will be ignored.</p>
+<blockquote>
+<p>Only activate the workflow for <em>public</em> repos or with a subscription-model for <em>GitHub</em> and <em>npmjs</em>. It won't work for <em>private</em> repos otherwise.**</p>
+</blockquote>
+<blockquote>
+<p>The file <code>.env.github</code> must be existent at the root and the variable <code>GHPW_AUTO_PUBLISH_PROJECT</code> must be set, otherwise the workflow <code>publish-to-npm-and-deploy-docs</code> throws an error.</p>
+</blockquote>
+<a id="md:run-tests" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Run Tests<a href="#md:run-tests" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>In <code>.env.github</code> set the <code>GHPW_RUN_TESTS</code> to <code>true</code> to run jest-tests before publishing the documentation or the package. When enabled, the publishing-workflow will terminate with an error if the tests fail.</p>
+<blockquote>
+<p>If activated and there are no tests, it will throw an error and terminate the publishing-workflow</p>
+</blockquote>
+<a id="md:publish-documentation-as-github-page" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Publish Documentation as <em>GitHub-Page</em><a href="#md:publish-documentation-as-github-page" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>In <code>.env.github</code> set the <code>GHPW_PUBLISH_DOCUMENTATION</code> to <code>true</code> to publish the documentation. It will use a branch <code>gh-pages-docs</code> for the docs.</p>
+<p>For it to deploy to <em>GitHub-Page</em> you must setup the <em>Page</em> under <em>Settings</em>.</p>
+<blockquote>
+<p>Setup the page at <strong>Repo -&gt; Settings -&gt; Pages -&gt; Deploy from Branch</strong> on <em>GitHub</em>. Make sure to choose the branch <code>gh-pages-docs</code>s root.</p>
+</blockquote>
+<blockquote>
+<p>Note: If you, for whatever reason, don't have the permission to publish the documentation via <code>gh-pages-docs</code>, add a <em>GitHub-Token</em> <code>GH_REPO_TOKEN</code> with at least all rights for <em>repo</em>.</p>
+</blockquote>
+<a id="md:publish-package-to-npmjs" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Publish package to <em>npmjs</em><a href="#md:publish-package-to-npmjs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>In <code>.env.github</code> set the <code>GHPW_PUBLISH_TO_NPM</code> to <code>true</code> to bump the <em>Version</em> (if not manually done), add a <em>Version-Tag</em> (again, if not manually done) and publish the packages to <em>npmjs</em>.</p>
+<p>For it to deploy you must set a <code>Repo-Secret</code> in <em>Actions secrets and variables</em> under <em>Settings</em> with the name <code>NPM_PUBLISH_TOKEN</code>.</p>
+<blockquote>
+<p>Setup a Token at <em>npmjs</em>, if not already done, that has the permission to publish packages. Then, under <strong>Repo -&gt; Settings -&gt; Actions secrets and variables</strong> set a new Secret with the name <code>NPM_PUBLISH_TOKEN</code> and copy the token from <em>npmjs</em> inside. Otherwise this will throw an error and terminate the publishing-process.</p>
+<p>Note, that when it terminates here, the version bumping already happened, which might be ignored, but can lead to inconsistent version-publishing.</p>
+</blockquote>
+<a id="md:srcindexts" class="tsd-anchor"></a><h2 class="tsd-anchor-link">src/index.ts<a href="#md:srcindexts" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>Works for VSCode-Plugin <code>Generate Index</code></strong></p>
+<ul>
+<li>Recommended shortcut: <em>Ctrl + Shift + Alt + I</em></li>
+<li>Export everything in <code>src/</code></li>
+<li>Ignores files <code>*.play.ts</code> and <code>*.test.ts</code></li>
+<li>Ignores folders <code>src/tests</code> and <code>src/play</code></li>
+</ul>
+<pre><code class="ts"><span class="hl-0">// @index(&#39;./**/!(*.test|*.play).ts&#39;, f =&gt; `export * from &quot;${f.path}&quot;;`, { ignore: [&quot;./tests/**/*&quot;, &quot;./play/**/*&quot;] })</span><br/><br/><span class="hl-0">// @endindex</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="md:template-for-readmemd" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Template for <code>README.MD</code><a href="#md:template-for-readmemd" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Make sure to replace the placeholders:</p>
+<ul>
+<li><strong>&lt;!-- PACKAGE_NAME --&gt;</strong>
+<blockquote>
+<p>For example <code>Package Template</code></p>
+</blockquote>
+</li>
+<li><strong>&lt;!-- DESCRIPTION --&gt;</strong>
+<blockquote>
+<p>Description of the package</p>
+</blockquote>
+</li>
+<li><strong>&lt;!-- package-name --&gt;</strong>
+<blockquote>
+<p>The actual name. For example <code>package-template</code>.</p>
+</blockquote>
+</li>
+<li><strong>&lt;!-- BASIC_EXAMPLE --&gt;</strong>
+<blockquote>
+<p>Basic Usage-Example</p>
+</blockquote>
+</li>
+<li><strong>&lt;!-- ADVANCED_EXAMPLE --&gt;</strong>
+<blockquote>
+<p>Advanced Usage-Example</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="markdown"># <!-- PACKAGE_NAME -->
+
+## Description
+
+<!-- DESCRIPTION -->
+
+## Installation
+
+To install the <!-- PACKAGE_NAME -->, use npm or yarn:
+
+```bash
+npm install @ocubist/<!-- package-name -->
+# or
+yarn add @ocubist/<!-- package-name -->
+```
+
+## Usage
+
+### Basic Example
+
+<!-- BASIC_EXAMPLE -->
+
+### Advanced Example with POST Request
+
+<!-- ADVANCED_EXAMPLE -->
+
+## API Documentation
+
+[Docs](https://ocubist.github.io/<!-- package-name -->/)
+
+## License
+
+The <!-- PACKAGE_NAME --> is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more information.
+</code><button type="button">Copy</button></pre>
+
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:package-template"><span>Package-<wbr/>Template</span></a><ul><li><a href="#md:initialize-project"><span>Initialize <wbr/>Project</span></a></li><li><a href="#md:update-template-files-from-package-template"><span>Update template-<wbr/>files from package-<wbr/>template</span></a></li><li><a href="#md:publish-documentation-to-github-pages-andor-package-to-npm"><span>Publish <wbr/>Documentation to github-<wbr/>pages and/or <wbr/>Package to npm</span></a></li><li><ul><li><a href="#md:run-tests"><span>Run <wbr/>Tests</span></a></li><li><a href="#md:publish-documentation-as-github-page"><span>Publish <wbr/>Documentation as <wbr/>Git<wbr/>Hub-<wbr/>Page</span></a></li><li><a href="#md:publish-package-to-npmjs"><span>Publish package to npmjs</span></a></li></ul></li><li><a href="#md:srcindexts"><span>src/index.ts</span></a></li><li><a href="#md:template-for-readmemd"><span>Template for README.MD</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>@ocubist/event-handler - v0.2.0</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>
