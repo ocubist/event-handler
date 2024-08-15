@@ -24,6 +24,6 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "@ocubist/singleton-manager": "^0.6.0"
+    "@ocubist/singleton-manager": "^0.6.1"
   }
 }
