@@ -1,6 +1,6 @@
 {
   "name": "@ocubist/event-handler",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "For personal usage",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,6 +24,6 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "@ocubist/singleton-manager": "^0.6.0"
+    "@ocubist/singleton-manager": "^0.6.1"
   }
 }
